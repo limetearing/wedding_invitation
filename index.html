@@ -121,6 +121,7 @@
       type="text/javascript"
       src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qiywmpa9z5"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
@@ -128,9 +129,21 @@
       <img class="bg_image" src="./src/1_1_bgimage1.png" />
       <img class="title" src="./src/1_2_title.png" />
     </div>
-
-    <img class="comment" src="./src/2_comment.png" />
-    <img class="synopsis" src="./src/3_synopsis.png" />
+    <img
+      class="comment"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-sine"
+      src="./src/2_comment.png"
+    />
+    <img
+      class="synopsis"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-offset="50"
+      data-aos-easing="ease-in-sine"
+      src="./src/3_synopsis.png"
+    />
     <img class="cast" src="./src/4_cast.png" />
     <img class="schedule" src="./src/5_schedule.png" />
     <img class="preview" src="./src/6_preview.png" />
@@ -164,6 +177,10 @@
         position: new naver.maps.LatLng(37.5184736, 127.0181633),
         map: map,
       });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
