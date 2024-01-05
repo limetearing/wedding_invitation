@@ -1,23 +1,168 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>박현근 ♥ 장원영, 결혼합니다!</title>
-    <meta name="robots" content="noindex">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, width=device-width">
+<html>
+  <head>
+    <style>
+      .poster {
+        position: relative;
+      }
 
-    <link rel="stylesheet" type="text/css" href="./css/banner.css" media="all">
+      .bg_image {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+      }
 
-    <script src="./js/banner.js"></script>
-</head>
-<body class="banner" oncontextmenu="return false" onselectstart="return false" ondragstart="return false"> 
-    <div class="banner">
-        <img src="./test_poster.jpeg" alt="Poster" style="max-width: 100%; height: auto;">
+      .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: auto;
+      }
+
+      .comment {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: auto;
+        margin-top: -15%;
+      }
+
+      .synopsis {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: auto;
+        margin-top: -15%;
+        margin-bottom: -15%;
+      }
+
+      .cast {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+      }
+
+      .schedule {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: auto;
+        margin-top: -15%;
+      }
+
+      .preview {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: auto;
+      }
+      .notice {
+        position: relative;
+      }
+      .notice_bg {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+      }
+      .notice_map {
+        position: absolute;
+        top: 18%;
+        left: 10%;
+        z-index: 100;
+        width: 100%;
+        height: auto;
+      }
+      .contact {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+        margin-top: -8%;
+      }
+
+      .thanks {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <script
+      type="text/javascript"
+      src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=qiywmpa9z5"
+    ></script>
+  </head>
+
+  <body>
+    <div class="poster">
+      <img class="bg_image" src="./src/1_1_bgimage1.png" />
+      <img class="title" src="./src/1_2_title.png" />
     </div>
-</body>
+
+    <img class="comment" src="./src/2_comment.png" />
+    <img class="synopsis" src="./src/3_synopsis.png" />
+    <img class="cast" src="./src/4_cast.png" />
+    <img class="schedule" src="./src/5_schedule.png" />
+    <img class="preview" src="./src/6_preview.png" />
+
+    <div class="notice">
+      <img class="notice_bg" src="./src/7_notice.png" />
+      <div class="notice_map">
+        <div id="map" style="width: 80%; height: 250px"></div>
+        <!-- <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.552226316009!2d127.01558837596873!3d37.5184778268822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca397e625e8f3%3A0xda6c2c83bc28b323!2z642UIOumrOuyhOyCrOydtOuTnCDtmLjthZQg7Juo65Sp7ZmA!5e0!3m2!1sen!2skr!4v1704485638054!5m2!1sen!2skr"
+          width="80%"
+          height="350px"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe> -->
+      </div>
+    </div>
+
+    <img class="contact" src="./src/8_contact.png" />
+    <img class="thanks" src="./src/9_thanks.png" />
+
+    <script>
+      var mapOptions = {
+        center: new naver.maps.LatLng(37.518, 127.0181633),
+        zoom: 15.5,
+      };
+      var map = new naver.maps.Map("map", mapOptions);
+      var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.5184736, 127.0181633),
+        map: map,
+      });
+    </script>
+  </body>
 </html>
