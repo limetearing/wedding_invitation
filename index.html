@@ -6,7 +6,6 @@
       .poster {
         position: relative;
       }
-
       .bg_image {
         position: relative;
         top: 0;
@@ -15,7 +14,26 @@
         width: 100%;
         height: auto;
       }
-
+      .slide_show {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @keyframes fade {
+        from {
+          opacity: 0.2;
+        }
+        to {
+          opacity: 1;
+        }
+      }
       .title {
         position: absolute;
         top: 0;
@@ -42,7 +60,7 @@
         z-index: 2;
         width: 100%;
         height: auto;
-        margin-top: -15%;
+        margin-top: -20%;
         margin-bottom: -15%;
       }
 
@@ -67,12 +85,37 @@
 
       .preview {
         position: relative;
+      }
+      .preview_img1 {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        width: 50%;
+        height: auto;
+        z-index: 3;
+      }
+      .preview_img2 {
+        position: absolute;
+        z-index: 3;
+      }
+      .preview_img3 {
+        position: absolute;
+        z-index: 3;
+      }
+      .preview_img4 {
+        position: absolute;
+        z-index: 3;
+      }
+
+      .preview_bg {
+        position: relative;
         top: 0;
         left: 0;
         z-index: 2;
         width: 100%;
         height: auto;
       }
+
       .notice {
         position: relative;
       }
@@ -92,7 +135,11 @@
         width: 100%;
         height: auto;
       }
+
       .contact {
+        position: relative;
+      }
+      .contact_bg {
         position: relative;
         top: 0;
         left: 0;
@@ -101,14 +148,88 @@
         height: auto;
         margin-top: -8%;
       }
+      .contact_call1 {
+        position: absolute;
+        top: 28.5%;
+        left: 34.5%;
+        z-index: 2;
+        width: 4.5%;
+        height: auto;
+      }
+      .contact_call2 {
+        position: absolute;
+        top: 28.5%;
+        left: 75.1%;
+        z-index: 2;
+        width: 4.5%;
+        height: auto;
+      }
+      .contact_copy1 {
+        position: absolute;
+        top: 48.5%;
+        left: 65%;
+        z-index: 2;
+        width: 15%;
+        height: auto;
+      }
+      .contact_copy2 {
+        position: absolute;
+        top: 55%;
+        left: 65%;
+        z-index: 2;
+        width: 15%;
+        height: auto;
+      }
+      .contact_copy3 {
+        position: absolute;
+        top: 61.5%;
+        left: 65%;
+        z-index: 2;
+        width: 15%;
+        height: auto;
+      }
+      .contact_copy4 {
+        position: absolute;
+        top: 76.5%;
+        left: 65%;
+        z-index: 2;
+        width: 15%;
+        height: auto;
+      }
+      .contact_copy5 {
+        position: absolute;
+        top: 83%;
+        left: 65%;
+        z-index: 2;
+        width: 15%;
+        height: auto;
+      }
+      .contact_copy6 {
+        position: absolute;
+        top: 89.5%;
+        left: 65%;
+        z-index: 2;
+        width: 15%;
+        height: auto;
+      }
 
       .thanks {
+        position: relative;
+      }
+      .thanks_bg {
         position: relative;
         top: 0;
         left: 0;
         z-index: 1;
         width: 100%;
         height: auto;
+      }
+      .thanks_button {
+        position: absolute;
+        top: 55%;
+        left: 25%;
+        z-index: 2;
+        width: 50%;
       }
     </style>
     <meta charset="UTF-8" />
@@ -126,46 +247,134 @@
 
   <body>
     <div class="poster">
-      <img class="bg_image" src="./src/1_1_bgimage1.png" />
+      <div class="slide_show fade">
+        <img class="bg_image" src="./src/1_1_bgimage1.png" />
+      </div>
+      <div class="slide_show fade">
+        <img class="bg_image" src="./src/1_1_bgimage2.png" />
+      </div>
+      <div class="slide_show fade">
+        <img class="bg_image" src="./src/1_1_bgimage3.png" />
+      </div>
+      <div class="slide_show fade">
+        <img class="bg_image" src="./src/1_1_bgimage4.png" />
+      </div>
+      <div class="slide_show fade">
+        <img class="bg_image" src="./src/1_1_bgimage5.png" />
+      </div>
+      <div class="slide_show fade">
+        <img class="bg_image" src="./src/1_1_bgimage6.png" />
+      </div>
+
       <img class="title" src="./src/1_2_title.png" />
     </div>
     <img
       class="comment"
       data-aos="fade-down"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-sine"
+      data-aos-duration="800"
+      data-aos-easing="ease-out-cubic"
       src="./src/2_comment.png"
     />
     <img
       class="synopsis"
-      data-aos="fade-right"
-      data-aos-duration="1000"
-      data-aos-offset="50"
-      data-aos-easing="ease-in-sine"
+      data-aos="fade-down"
+      data-aos-duration="800"
+      data-aos-offset="100"
+      data-aos-easing="ease-in-out-cubic"
       src="./src/3_synopsis.png"
     />
-    <img class="cast" src="./src/4_cast.png" />
-    <img class="schedule" src="./src/5_schedule.png" />
-    <img class="preview" src="./src/6_preview.png" />
+    <img
+      class="cast"
+      data-aos="fade-down"
+      data-aos-duration="800"
+      data-aos-easing="ease-out-cubic"
+      src="./src/4_cast.png"
+    />
+    <img
+      class="schedule"
+      data-aos="fade-down"
+      data-aos-duration="800"
+      data-aos-easing="ease-out-cubic"
+      src="./src/5_schedule.png"
+    />
+
+    <div class="preview">
+      <img
+        class="preview_bg"
+        data-aos="fade-down"
+        data-aos-duration="800"
+        data-aos-easing="ease-out-cubic"
+        src="./src/6_preview.png"
+      />
+      <div class="preview_img1">
+        <img
+          class="preview_img1"
+          src="./src/gallery_images/(SCENE01)Photo_01.jpg"
+        />
+      </div>
+    </div>
 
     <div class="notice">
       <img class="notice_bg" src="./src/7_notice.png" />
       <div class="notice_map">
         <div id="map" style="width: 80%; height: 250px"></div>
-        <!-- <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.552226316009!2d127.01558837596873!3d37.5184778268822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca397e625e8f3%3A0xda6c2c83bc28b323!2z642UIOumrOuyhOyCrOydtOuTnCDtmLjthZQg7Juo65Sp7ZmA!5e0!3m2!1sen!2skr!4v1704485638054!5m2!1sen!2skr"
-          width="80%"
-          height="350px"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe> -->
       </div>
     </div>
 
-    <img class="contact" src="./src/8_contact.png" />
-    <img class="thanks" src="./src/9_thanks.png" />
+    <div class="contact">
+      <img class="contact_bg" src="./src/8_contact.png" />
+      <img
+        class="contact_call1"
+        src="./src/8_call_button.png"
+        onclick="copyCall1()"
+      />
+      <img
+        class="contact_call2"
+        src="./src/8_call_button.png"
+        onclick="copyCall2()"
+      />
+
+      <img
+        class="contact_copy1"
+        src="./src/8_copy_button.png"
+        onclick="copyAcc1()"
+      />
+      <img
+        class="contact_copy2"
+        src="./src/8_copy_button.png"
+        onclick="copyAcc2()"
+      />
+      <img
+        class="contact_copy3"
+        src="./src/8_copy_button.png"
+        onclick="copyAcc3()"
+      />
+
+      <img
+        class="contact_copy4"
+        src="./src/8_copy_button.png"
+        onclick="copyAcc4()"
+      />
+      <img
+        class="contact_copy5"
+        src="./src/8_copy_button.png"
+        onclick="copyAcc5()"
+      />
+      <img
+        class="contact_copy6"
+        src="./src/8_copy_button.png"
+        onclick="copyAcc6()"
+      />
+    </div>
+
+    <div class="thanks">
+      <img class="thanks_bg" src="./src/9_thanks.png" />
+      <img
+        class="thanks_button"
+        src="./src/9_link_button.png"
+        onclick="copyUrl()"
+      />
+    </div>
 
     <script>
       var mapOptions = {
@@ -181,6 +390,98 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+
+      //현재 url 변수로 가져오기
+      let nowUrl = window.location.href;
+
+      function copyUrl() {
+        //nowUrl 변수에 담긴 주소를
+        navigator.clipboard.writeText(nowUrl).then((res) => {
+          alert("모바일 청첩장 주소가 복사되었습니다.");
+        });
+      }
+
+      function copyCall1() {
+        //nowUrl 변수에 담긴 주소를
+        navigator.clipboard.writeText("01076855106").then((res) => {
+          alert("신랑 연락처가 복사되었습니다.");
+        });
+      }
+      function copyCall2() {
+        //nowUrl 변수에 담긴 주소를
+        navigator.clipboard.writeText("01035949239").then((res) => {
+          alert("신부 연락처가 복사되었습니다.");
+        });
+      }
+
+      function copyAcc1() {
+        //nowUrl 변수에 담긴 주소를
+        navigator.clipboard
+          .writeText("박현근 우리은행 1002-747-975534")
+          .then((res) => {
+            alert("박현근님 계좌번호가 복사되었습니다.");
+          });
+      }
+      function copyAcc2() {
+        //nowUrl 변수에 담긴 주소를
+        navigator.clipboard
+          .writeText("박영범 농협 079-12-334115")
+          .then((res) => {
+            alert("박영범님 계좌번호가 복사되었습니다.");
+          });
+      }
+      function copyAcc3() {
+        //nowUrl 변수에 담긴 주소를
+        navigator.clipboard
+          .writeText("양혜영 농협 125-12-224101")
+          .then((res) => {
+            alert("양혜영님 계좌번호가 복사되었습니다.");
+          });
+      }
+
+      function copyAcc4() {
+        //nowUrl 변수에 담긴 주소를
+        navigator.clipboard
+          .writeText("장원영 우리은행 1002-253-960825")
+          .then((res) => {
+            alert("장원영님 계좌번호가 복사되었습니다.");
+          });
+      }
+      function copyAcc5() {
+        //nowUrl 변수에 담긴 주소를
+        navigator.clipboard
+          .writeText("장범진 KB국민 515525-93-111537")
+          .then((res) => {
+            alert("장범진님 계좌번호가 복사되었습니다.");
+          });
+      }
+      function copyAcc6() {
+        //nowUrl 변수에 담긴 주소를
+        navigator.clipboard
+          .writeText("유혜숙 카카오뱅크 3333-09-8617769")
+          .then((res) => {
+            alert("유혜숙님 계좌번호가 복사되었습니다.");
+          });
+      }
+
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("bg_image");
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+
+        setTimeout(showSlides, 3500);
+      }
     </script>
   </body>
 </html>
