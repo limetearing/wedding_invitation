@@ -3,6 +3,11 @@
   <head>
     <title>박현근 ♥ 장원영, 결혼합니다!</title>
     <style>
+      @font-face {
+        font-family: "CODE Light";
+        src: url("./fonts/CODE-Light.woff") format("woff");
+      }
+
       .poster {
         position: relative;
       }
@@ -88,23 +93,43 @@
       }
       .preview_img1 {
         position: absolute;
-        top: 20%;
-        left: 20%;
-        width: 50%;
+        top: 9.5%;
+        left: 0;
+        width: 100%;
         height: auto;
         z-index: 3;
+        font-family: "CODE Light";
+        font-weight: bold;
       }
       .preview_img2 {
         position: absolute;
+        top: 30%;
+        left: 0;
+        width: 100%;
+        height: auto;
         z-index: 3;
+        font-family: "CODE Light";
+        font-weight: bold;
       }
       .preview_img3 {
         position: absolute;
+        top: 50.5%;
+        left: 0;
+        width: 100%;
+        height: auto;
         z-index: 3;
+        font-family: "CODE Light";
+        font-weight: bold;
       }
       .preview_img4 {
         position: absolute;
+        top: 69.7%;
+        left: 0;
+        width: 100%;
+        height: auto;
         z-index: 3;
+        font-family: "CODE Light";
+        font-weight: bold;
       }
 
       .preview_bg {
@@ -307,9 +332,71 @@
         src="./src/6_preview.png"
       />
       <div class="preview_img1">
+        <p style="text-align: center">
+          <font size="5">SCENE 01</font>
+        </p>
         <img
-          class="preview_img1"
+          style="width: 30%; height: auto; margin-left: 19%"
           src="./src/gallery_images/(SCENE01)Photo_01.jpg"
+        />
+        <img
+          style="width: 30%; height: auto; margin-left: 2%"
+          src="./src/gallery_images/(SCENE01)Photo_02.jpg"
+        />
+        <img
+          style="width: 5%; height: auto; margin-left: 2%; margin-bottom: 20%"
+          src="./src/6_view_button.png"
+          onclick="openScene1()"
+        />
+      </div>
+      <div class="preview_img2">
+        <p style="text-align: center">
+          <font size="5">SCENE 02</font>
+        </p>
+        <img
+          style="width: 30%; height: auto; margin-left: 19%"
+          src="./src/gallery_images/(SCENE02)Photo_01.jpg"
+        />
+        <img
+          style="width: 30%; height: auto; margin-left: 2%"
+          src="./src/gallery_images/(SCENE02)Photo_02.jpg"
+        />
+        <img
+          style="width: 5%; height: auto; margin-left: 2%; margin-bottom: 20%"
+          src="./src/6_view_button.png"
+          onclick="openScene2()"
+        />
+      </div>
+      <div class="preview_img3">
+        <p style="text-align: center">
+          <font size="5">SCENE 03</font>
+        </p>
+        <img
+          style="width: 62%; height: auto; margin-left: 19%"
+          src="./src/gallery_images/(SCENE03)Photo_01.jpg"
+        />
+        <img
+          style="width: 5%; height: auto; margin-left: 2%; margin-bottom: 18%"
+          src="./src/6_view_button.png"
+          onclick="openScene3()"
+        />
+      </div>
+      <div class="preview_img4">
+        <p style="text-align: center">
+          <font size="5">SCENE 04</font>
+        </p>
+        <img
+          style="width: 30%; height: auto; margin-left: 19%"
+          src="./src/gallery_images/(SCENE04)Photo_01.jpg"
+        />
+        <img
+          style="width: 30%; height: auto; margin-left: 2%"
+          src="./src/gallery_images/(SCENE04)Photo_02.jpg"
+        />
+        <img
+          style="width: 5%; height: auto; margin-left: 2%; margin-bottom: 20%"
+          src="./src/6_view_button.png"
+          onclick="openScene4()"
         />
       </div>
     </div>
