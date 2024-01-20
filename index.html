@@ -123,7 +123,7 @@
       }
       .preview_img4 {
         position: absolute;
-        top: 69.7%;
+        top: 71%;
         left: 0;
         width: 100%;
         height: auto;
@@ -336,17 +336,30 @@
           <font size="5">SCENE 01</font>
         </p>
         <img
-          style="width: 30%; height: auto; margin-left: 19%"
-          src="./src/gallery_images/(SCENE01)Photo_01.jpg"
-        />
-        <img
-          style="width: 30%; height: auto; margin-left: 2%"
-          src="./src/gallery_images/(SCENE01)Photo_02.jpg"
-        />
-        <img
-          style="width: 5%; height: auto; margin-left: 2%; margin-bottom: 20%"
+          style="
+            width: 5%;
+            height: auto;
+            margin-left: 6%;
+            margin-bottom: 20%;
+            transform: scaleX(-1);
+          "
           src="./src/6_view_button.png"
-          onclick="openScene1()"
+          onclick="prevScene1()"
+        />
+        <img
+          id="pre1-1"
+          style="width: 30%; height: auto; border-radius: 18px; margin-left: 7%"
+          src="./src/gallery_images/(S1)Photo_01.jpg"
+        />
+        <img
+          id="pre1-2"
+          style="width: 30%; height: auto; margin-left: 2%; border-radius: 18px"
+          src="./src/gallery_images/(S1)Photo_02.jpg"
+        />
+        <img
+          style="width: 5%; height: auto; margin-left: 7%; margin-bottom: 20%"
+          src="./src/6_view_button.png"
+          onclick="nextScene1()"
         />
       </div>
       <div class="preview_img2">
@@ -354,17 +367,30 @@
           <font size="5">SCENE 02</font>
         </p>
         <img
-          style="width: 30%; height: auto; margin-left: 19%"
-          src="./src/gallery_images/(SCENE02)Photo_01.jpg"
-        />
-        <img
-          style="width: 30%; height: auto; margin-left: 2%"
-          src="./src/gallery_images/(SCENE02)Photo_02.jpg"
-        />
-        <img
-          style="width: 5%; height: auto; margin-left: 2%; margin-bottom: 20%"
+          style="
+            width: 5%;
+            height: auto;
+            margin-left: 6%;
+            margin-bottom: 20%;
+            transform: scaleX(-1);
+          "
           src="./src/6_view_button.png"
-          onclick="openScene2()"
+          onclick="prevScene2()"
+        />
+        <img
+          id="pre2-1"
+          style="width: 30%; height: auto; border-radius: 18px; margin-left: 7%"
+          src="./src/gallery_images/(S2)Photo_01.jpg"
+        />
+        <img
+          id="pre2-2"
+          style="width: 30%; height: auto; margin-left: 2%; border-radius: 18px"
+          src="./src/gallery_images/(S2)Photo_02.jpg"
+        />
+        <img
+          style="width: 5%; height: auto; margin-left: 7%; margin-bottom: 20%"
+          src="./src/6_view_button.png"
+          onclick="nextScene2()"
         />
       </div>
       <div class="preview_img3">
@@ -372,13 +398,30 @@
           <font size="5">SCENE 03</font>
         </p>
         <img
-          style="width: 62%; height: auto; margin-left: 19%"
-          src="./src/gallery_images/(SCENE03)Photo_01.jpg"
+          style="
+            width: 5%;
+            height: auto;
+            margin-left: 6%;
+            margin-bottom: 20%;
+            transform: scaleX(-1);
+          "
+          src="./src/6_view_button.png"
+          onclick="prevScene3()"
         />
         <img
-          style="width: 5%; height: auto; margin-left: 2%; margin-bottom: 18%"
+          id="pre3-1"
+          style="width: 30%; height: auto; border-radius: 18px; margin-left: 7%"
+          src="./src/gallery_images/(S3)Photo_01.jpg"
+        />
+        <img
+          id="pre3-2"
+          style="width: 30%; height: auto; margin-left: 2%; border-radius: 18px"
+          src="./src/gallery_images/(S3)Photo_02.jpg"
+        />
+        <img
+          style="width: 5%; height: auto; margin-left: 7%; margin-bottom: 18%"
           src="./src/6_view_button.png"
-          onclick="openScene3()"
+          onclick="nextScene3()"
         />
       </div>
       <div class="preview_img4">
@@ -386,17 +429,30 @@
           <font size="5">SCENE 04</font>
         </p>
         <img
-          style="width: 30%; height: auto; margin-left: 19%"
-          src="./src/gallery_images/(SCENE04)Photo_01.jpg"
-        />
-        <img
-          style="width: 30%; height: auto; margin-left: 2%"
-          src="./src/gallery_images/(SCENE04)Photo_02.jpg"
-        />
-        <img
-          style="width: 5%; height: auto; margin-left: 2%; margin-bottom: 20%"
+          style="
+            width: 5%;
+            height: auto;
+            margin-left: 6%;
+            margin-bottom: 20%;
+            transform: scaleX(-1);
+          "
           src="./src/6_view_button.png"
-          onclick="openScene4()"
+          onclick="prevScene4()"
+        />
+        <img
+          id="pre4-1"
+          style="width: 30%; height: auto; margin-left: 7%; border-radius: 18px"
+          src="./src/gallery_images/(S4)Photo_01.jpg"
+        />
+        <img
+          id="pre4-2"
+          style="width: 30%; height: auto; margin-left: 2%; border-radius: 18px"
+          src="./src/gallery_images/(S4)Photo_02.jpg"
+        />
+        <img
+          style="width: 5%; height: auto; margin-left: 7%; margin-bottom: 20%"
+          src="./src/6_view_button.png"
+          onclick="nextScene4()"
         />
       </div>
     </div>
@@ -568,6 +624,174 @@
         slides[slideIndex - 1].style.display = "block";
 
         setTimeout(showSlides, 3500);
+      }
+
+      function prevScene1() {
+        var src1 = document.getElementById("pre1-1").src;
+        document.getElementById("pre1-2").src = src1;
+
+        var filename1 = src1.split("/").pop();
+        var nameWithoutExtension1 = filename1.split(".")[0];
+        var numberInScene1 = nameWithoutExtension1.split("_")[1];
+        var newNumber1 = parseInt(numberInScene1) - 1;
+        if (newNumber1 < 1) {
+          newNumber1 = 10;
+          newNumber1 = newNumber1.toString();
+        } else {
+          newNumber1 = "0" + newNumber1.toString();
+        }
+        var newName1 = nameWithoutExtension1.replace(
+          numberInScene1,
+          newNumber1
+        );
+        var newSrc1 = src1.replace(filename1, newName1 + ".jpg");
+        document.getElementById("pre1-1").src = newSrc1;
+      }
+
+      function nextScene1() {
+        var src2 = document.getElementById("pre1-2").src;
+        document.getElementById("pre1-1").src = src2;
+
+        var filename2 = src2.split("/").pop();
+        var nameWithoutExtension2 = filename2.split(".")[0];
+        var numberInScene2 = nameWithoutExtension2.split("_")[1];
+        var newNumber2 = parseInt(numberInScene2) + 1;
+        if (newNumber2 > 10) {
+          newNumber2 = 1;
+          newNumber2 = "0" + newNumber2.toString();
+        } else if (newNumber2 == 10) {
+          newNumber2 = newNumber2.toString();
+        } else {
+          newNumber2 = "0" + newNumber2.toString();
+        }
+        var newName2 = nameWithoutExtension2.replace(
+          numberInScene2,
+          newNumber2
+        );
+        var newSrc2 = src2.replace(filename2, newName2 + ".jpg");
+        document.getElementById("pre1-2").src = newSrc2;
+      }
+
+      function prevScene2() {
+        var src1 = document.getElementById("pre2-1").src;
+        document.getElementById("pre2-2").src = src1;
+
+        var filename1 = src1.split("/").pop();
+        var nameWithoutExtension1 = filename1.split(".")[0];
+        var numberInScene1 = nameWithoutExtension1.split("_")[1];
+        var newNumber1 = parseInt(numberInScene1) - 1;
+        if (newNumber1 < 1) {
+          newNumber1 = 7;
+        }
+        newNumber1 = "0" + newNumber1.toString();
+        var newName1 = nameWithoutExtension1.replace(
+          numberInScene1,
+          newNumber1
+        );
+        var newSrc1 = src1.replace(filename1, newName1 + ".jpg");
+        document.getElementById("pre2-1").src = newSrc1;
+      }
+
+      function nextScene2() {
+        var src2 = document.getElementById("pre2-2").src;
+        document.getElementById("pre2-1").src = src2;
+
+        var filename2 = src2.split("/").pop();
+        var nameWithoutExtension2 = filename2.split(".")[0];
+        var numberInScene2 = nameWithoutExtension2.split("_")[1];
+        var newNumber2 = parseInt(numberInScene2) + 1;
+        if (newNumber2 > 7) {
+          newNumber2 = 1;
+        }
+        newNumber2 = "0" + newNumber2.toString();
+        var newName2 = nameWithoutExtension2.replace(
+          numberInScene2,
+          newNumber2
+        );
+        var newSrc2 = src2.replace(filename2, newName2 + ".jpg");
+        document.getElementById("pre2-2").src = newSrc2;
+      }
+
+      function prevScene3() {
+        var src1 = document.getElementById("pre3-1").src;
+        document.getElementById("pre3-2").src = src1;
+
+        var filename1 = src1.split("/").pop();
+        var nameWithoutExtension1 = filename1.split(".")[0];
+        var numberInScene1 = nameWithoutExtension1.split("_")[1];
+        var newNumber1 = parseInt(numberInScene1) - 1;
+        if (newNumber1 < 1) {
+          newNumber1 = 7;
+        }
+        newNumber1 = "0" + newNumber1.toString();
+        var newName1 = nameWithoutExtension1.replace(
+          numberInScene1,
+          newNumber1
+        );
+        var newSrc1 = src1.replace(filename1, newName1 + ".jpg");
+        document.getElementById("pre3-1").src = newSrc1;
+      }
+
+      function nextScene3() {
+        var src2 = document.getElementById("pre3-2").src;
+        document.getElementById("pre3-1").src = src2;
+
+        var filename2 = src2.split("/").pop();
+        var nameWithoutExtension2 = filename2.split(".")[0];
+        var numberInScene2 = nameWithoutExtension2.split("_")[1];
+        var newNumber2 = parseInt(numberInScene2) + 1;
+        if (newNumber2 > 7) {
+          newNumber2 = 1;
+        }
+        newNumber2 = "0" + newNumber2.toString();
+        var newName2 = nameWithoutExtension2.replace(
+          numberInScene2,
+          newNumber2
+        );
+        var newSrc2 = src2.replace(filename2, newName2 + ".jpg");
+        document.getElementById("pre3-2").src = newSrc2;
+      }
+
+      function prevScene4() {
+        var src1 = document.getElementById("pre4-1").src;
+        document.getElementById("pre4-2").src = src1;
+
+        var filename1 = src1.split("/").pop();
+        var nameWithoutExtension1 = filename1.split(".")[0];
+        var numberInScene1 = nameWithoutExtension1.split("_")[1];
+        var newNumber1 = parseInt(numberInScene1) - 1;
+        if (newNumber1 < 1) {
+          newNumber1 = 7;
+        }
+        newNumber1 = "0" + newNumber1.toString();
+
+        var newName1 = nameWithoutExtension1.replace(
+          numberInScene1,
+          newNumber1
+        );
+        var newSrc1 = src1.replace(filename1, newName1 + ".jpg");
+        document.getElementById("pre4-1").src = newSrc1;
+      }
+
+      function nextScene4() {
+        var src2 = document.getElementById("pre4-2").src;
+        document.getElementById("pre4-1").src = src2;
+
+        var filename2 = src2.split("/").pop();
+        var nameWithoutExtension2 = filename2.split(".")[0];
+        var numberInScene2 = nameWithoutExtension2.split("_")[1];
+        var newNumber2 = parseInt(numberInScene2) + 1;
+        if (newNumber2 > 7) {
+          newNumber2 = 1;
+        }
+        newNumber2 = "0" + newNumber2.toString();
+
+        var newName2 = nameWithoutExtension2.replace(
+          numberInScene2,
+          newNumber2
+        );
+        var newSrc2 = src2.replace(filename2, newName2 + ".jpg");
+        document.getElementById("pre4-2").src = newSrc2;
       }
     </script>
   </body>
