@@ -3,262 +3,17 @@
   <head>
     <title>박현근 ♥ 장원영, 결혼합니다!</title>
     <style>
+      body {
+        margin: 0;
+        overflow-x: hidden;
+      }
       @font-face {
         font-family: "CODE Light";
         src: url("./fonts/CODE-Light.woff") format("woff");
       }
-
-      .poster {
-        position: relative;
-      }
-      .bg_image {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: auto;
-      }
-      .slide_show {
-        position: relative;
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-      @keyframes fade {
-        from {
-          opacity: 0.2;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      .title {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        width: 100%;
-        height: auto;
-      }
-
-      .comment {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        width: 100%;
-        height: auto;
-        margin-top: -15%;
-      }
-
-      .synopsis {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        width: 100%;
-        height: auto;
-        margin-top: -20%;
-        margin-bottom: -15%;
-      }
-
-      .cast {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: auto;
-      }
-
-      .schedule {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 3;
-        width: 100%;
-        height: auto;
-        margin-top: -15%;
-      }
-
-      .preview {
-        position: relative;
-        font-size: 1em;
-      }
-      .preview_img1 {
-        position: absolute;
-        top: 9.5%;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 3;
-        font-family: "CODE Light";
-        font-weight: bold;
-      }
-      .preview_img2 {
-        position: absolute;
-        top: 30%;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 3;
-        font-family: "CODE Light";
-        font-weight: bold;
-      }
-      .preview_img3 {
-        position: absolute;
-        top: 50.5%;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 3;
-        font-family: "CODE Light";
-        font-weight: bold;
-      }
-      .preview_img4 {
-        position: absolute;
-        top: 71%;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 3;
-        font-family: "CODE Light";
-        font-weight: bold;
-      }
-
-      .preview_bg {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        width: 100%;
-        height: auto;
-      }
-
-      .notice {
-        position: relative;
-      }
-      .notice_bg {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: auto;
-        margin-top: -8%;
-      }
-      .notice_map {
-        position: absolute;
-        top: 15%;
-        left: 10%;
-        z-index: 100;
-        width: 100%;
-        height: auto;
-      }
-
-      .contact {
-        position: relative;
-      }
-      .contact_bg {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: auto;
-        margin-top: -8%;
-      }
-      .contact_call1 {
-        position: absolute;
-        top: 28.5%;
-        left: 34.5%;
-        z-index: 2;
-        width: 4.5%;
-        height: auto;
-      }
-      .contact_call2 {
-        position: absolute;
-        top: 28.5%;
-        left: 75.1%;
-        z-index: 2;
-        width: 4.5%;
-        height: auto;
-      }
-      .contact_copy1 {
-        position: absolute;
-        top: 48.5%;
-        left: 65%;
-        z-index: 2;
-        width: 15%;
-        height: auto;
-      }
-      .contact_copy2 {
-        position: absolute;
-        top: 55%;
-        left: 65%;
-        z-index: 2;
-        width: 15%;
-        height: auto;
-      }
-      .contact_copy3 {
-        position: absolute;
-        top: 61.5%;
-        left: 65%;
-        z-index: 2;
-        width: 15%;
-        height: auto;
-      }
-      .contact_copy4 {
-        position: absolute;
-        top: 76.5%;
-        left: 65%;
-        z-index: 2;
-        width: 15%;
-        height: auto;
-      }
-      .contact_copy5 {
-        position: absolute;
-        top: 83%;
-        left: 65%;
-        z-index: 2;
-        width: 15%;
-        height: auto;
-      }
-      .contact_copy6 {
-        position: absolute;
-        top: 89.5%;
-        left: 65%;
-        z-index: 2;
-        width: 15%;
-        height: auto;
-      }
-
-      .thanks {
-        position: relative;
-      }
-      .thanks_bg {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: auto;
-      }
-      .thanks_button {
-        position: absolute;
-        top: 55%;
-        left: 25%;
-        z-index: 2;
-        width: 50%;
-      }
     </style>
+    <link rel="stylesheet" href="./css/section.css" />
+
     <meta charset="UTF-8" />
     <meta property="og:image" content="./src/Thumbnail.jpg" />
     <meta property="og:title" content="박현근 ♥ 장원영, 결혼합니다!" />
@@ -278,25 +33,9 @@
 
   <body>
     <div class="poster">
-      <div class="slide_show fade">
-        <img class="bg_image" src="./src/1_1_bgimage1.png" />
+      <div class="slide_show">
+        <img class="bg_image" id="bg_img" src="./src/1_1_bgimage1.png" />
       </div>
-      <div class="slide_show fade">
-        <img class="bg_image" src="./src/1_1_bgimage2.png" />
-      </div>
-      <div class="slide_show fade">
-        <img class="bg_image" src="./src/1_1_bgimage3.png" />
-      </div>
-      <div class="slide_show fade">
-        <img class="bg_image" src="./src/1_1_bgimage4.png" />
-      </div>
-      <div class="slide_show fade">
-        <img class="bg_image" src="./src/1_1_bgimage5.png" />
-      </div>
-      <div class="slide_show fade">
-        <img class="bg_image" src="./src/1_1_bgimage6.png" />
-      </div>
-
       <img class="title" src="./src/1_2_title.png" />
     </div>
     <img
@@ -325,15 +64,12 @@
     <div class="preview">
       <img class="preview_bg" src="./src/6_preview.png" />
       <div class="preview_img1">
-        <p style="text-align: center; font-size: 1.5em">
-          <font>SCENE 01</font>
-        </p>
         <img
           style="
             width: 5%;
             height: auto;
-            margin-left: 6%;
-            margin-bottom: 20%;
+            margin-left: 3%;
+            margin-bottom: 25%;
             transform: scaleX(-1);
           "
           src="./src/6_view_button.png"
@@ -341,32 +77,29 @@
         />
         <img
           id="pre1-1"
-          style="width: 30%; height: auto; border-radius: 18px; margin-left: 7%"
+          style="width: 37%; height: auto; border-radius: 18px; margin-left: 3%"
           src="./src/gallery_images/(S1)Photo_01.jpg"
-          onclick="window.open(this.src)"
+          onclick="window.open('./scene1.html')"
         />
         <img
           id="pre1-2"
-          style="width: 30%; height: auto; margin-left: 2%; border-radius: 18px"
+          style="width: 37%; height: auto; margin-left: 2%; border-radius: 18px"
           src="./src/gallery_images/(S1)Photo_02.jpg"
-          onclick="window.open(this.src)"
+          onclick="window.open('./scene1.html')"
         />
         <img
-          style="width: 5%; height: auto; margin-left: 7%; margin-bottom: 20%"
+          style="width: 5%; height: auto; margin-left: 3%; margin-bottom: 25%"
           src="./src/6_view_button.png"
           onclick="nextScene1()"
         />
       </div>
       <div class="preview_img2">
-        <p style="text-align: center">
-          <font size="5">SCENE 02</font>
-        </p>
         <img
           style="
             width: 5%;
             height: auto;
-            margin-left: 6%;
-            margin-bottom: 20%;
+            margin-left: 3%;
+            margin-bottom: 25%;
             transform: scaleX(-1);
           "
           src="./src/6_view_button.png"
@@ -374,32 +107,29 @@
         />
         <img
           id="pre2-1"
-          style="width: 30%; height: auto; border-radius: 18px; margin-left: 7%"
+          style="width: 37%; height: auto; border-radius: 18px; margin-left: 3%"
           src="./src/gallery_images/(S2)Photo_01.jpg"
-          onclick="window.open(this.src)"
+          onclick="window.open('./scene2.html')"
         />
         <img
           id="pre2-2"
-          style="width: 30%; height: auto; margin-left: 2%; border-radius: 18px"
+          style="width: 37%; height: auto; margin-left: 2%; border-radius: 18px"
           src="./src/gallery_images/(S2)Photo_02.jpg"
-          onclick="window.open(this.src)"
+          onclick="window.open('./scene2.html')"
         />
         <img
-          style="width: 5%; height: auto; margin-left: 7%; margin-bottom: 20%"
+          style="width: 5%; height: auto; margin-left: 3%; margin-bottom: 25%"
           src="./src/6_view_button.png"
           onclick="nextScene2()"
         />
       </div>
       <div class="preview_img3">
-        <p style="text-align: center">
-          <font size="5">SCENE 03</font>
-        </p>
         <img
           style="
             width: 5%;
             height: auto;
-            margin-left: 6%;
-            margin-bottom: 20%;
+            margin-left: 3%;
+            margin-bottom: 25%;
             transform: scaleX(-1);
           "
           src="./src/6_view_button.png"
@@ -407,32 +137,29 @@
         />
         <img
           id="pre3-1"
-          style="width: 30%; height: auto; border-radius: 18px; margin-left: 7%"
+          style="width: 37%; height: auto; border-radius: 18px; margin-left: 3%"
           src="./src/gallery_images/(S3)Photo_01.jpg"
-          onclick="window.open(this.src)"
+          onclick="window.open('./scene3.html')"
         />
         <img
           id="pre3-2"
-          style="width: 30%; height: auto; margin-left: 2%; border-radius: 18px"
+          style="width: 37%; height: auto; margin-left: 2%; border-radius: 18px"
           src="./src/gallery_images/(S3)Photo_02.jpg"
-          onclick="window.open(this.src)"
+          onclick="window.open('./scene3.html')"
         />
         <img
-          style="width: 5%; height: auto; margin-left: 7%; margin-bottom: 18%"
+          style="width: 5%; height: auto; margin-left: 3%; margin-bottom: 25%"
           src="./src/6_view_button.png"
           onclick="nextScene3()"
         />
       </div>
       <div class="preview_img4">
-        <p style="text-align: center">
-          <font size="5">SCENE 04</font>
-        </p>
         <img
           style="
             width: 5%;
             height: auto;
-            margin-left: 6%;
-            margin-bottom: 20%;
+            margin-left: 3%;
+            margin-bottom: 25%;
             transform: scaleX(-1);
           "
           src="./src/6_view_button.png"
@@ -440,18 +167,18 @@
         />
         <img
           id="pre4-1"
-          style="width: 30%; height: auto; margin-left: 7%; border-radius: 18px"
+          style="width: 37%; height: auto; margin-left: 3%; border-radius: 18px"
           src="./src/gallery_images/(S4)Photo_01.jpg"
-          onclick="window.open(this.src)"
+          onclick="window.open('./scene4.html')"
         />
         <img
           id="pre4-2"
-          style="width: 30%; height: auto; margin-left: 2%; border-radius: 18px"
+          style="width: 37%; height: auto; margin-left: 2%; border-radius: 18px"
           src="./src/gallery_images/(S4)Photo_02.jpg"
-          onclick="window.open(this.src)"
+          onclick="window.open('./scene4.html')"
         />
         <img
-          style="width: 5%; height: auto; margin-left: 7%; margin-bottom: 20%"
+          style="width: 5%; height: auto; margin-left: 3%; margin-bottom: 25%"
           src="./src/6_view_button.png"
           onclick="nextScene4()"
         />
@@ -544,211 +271,8 @@
     <script src="./aos/dist/aos.js"></script>
     <script>
       AOS.init();
-
-      //현재 url 변수로 가져오기
-      let nowUrl = window.location.href;
-
-      function copyUrl() {
-        //nowUrl 변수에 담긴 주소를
-        navigator.clipboard.writeText(nowUrl).then((res) => {
-          alert("모바일 청첩장 주소가 복사되었습니다.");
-        });
-      }
-
-      function copyCall1() {
-        //nowUrl 변수에 담긴 주소를
-        navigator.clipboard.writeText("01076855106").then((res) => {
-          alert("신랑 연락처가 복사되었습니다.");
-        });
-      }
-      function copyCall2() {
-        //nowUrl 변수에 담긴 주소를
-        navigator.clipboard.writeText("01035949239").then((res) => {
-          alert("신부 연락처가 복사되었습니다.");
-        });
-      }
-
-      function copyAcc1() {
-        //nowUrl 변수에 담긴 주소를
-        navigator.clipboard
-          .writeText("박현근 우리은행 1002-747-975534")
-          .then((res) => {
-            alert("박현근님 계좌번호가 복사되었습니다.");
-          });
-      }
-      function copyAcc2() {
-        //nowUrl 변수에 담긴 주소를
-        navigator.clipboard
-          .writeText("박영범 농협 079-12-334115")
-          .then((res) => {
-            alert("박영범님 계좌번호가 복사되었습니다.");
-          });
-      }
-      function copyAcc3() {
-        //nowUrl 변수에 담긴 주소를
-        navigator.clipboard
-          .writeText("양혜영 농협 125-12-224101")
-          .then((res) => {
-            alert("양혜영님 계좌번호가 복사되었습니다.");
-          });
-      }
-
-      function copyAcc4() {
-        //nowUrl 변수에 담긴 주소를
-        navigator.clipboard
-          .writeText("장원영 우리은행 1002-253-960825")
-          .then((res) => {
-            alert("장원영님 계좌번호가 복사되었습니다.");
-          });
-      }
-      function copyAcc5() {
-        //nowUrl 변수에 담긴 주소를
-        navigator.clipboard
-          .writeText("장범진 KB국민 515525-93-111537")
-          .then((res) => {
-            alert("장범진님 계좌번호가 복사되었습니다.");
-          });
-      }
-      function copyAcc6() {
-        //nowUrl 변수에 담긴 주소를
-        navigator.clipboard
-          .writeText("유혜숙 카카오뱅크 3333-09-8617769")
-          .then((res) => {
-            alert("유혜숙님 계좌번호가 복사되었습니다.");
-          });
-      }
-
-      var slideIndex = 0;
-      showSlides();
-
-      function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("bg_image");
-
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-          slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-
-        setTimeout(showSlides, 3500);
-      }
-
-      function checkPrevNum(num, maxNum) {
-        if (num < 1) {
-          newNum = num + maxNum;
-        } else {
-          newNum = num;
-        }
-        if (newNum > 9) {
-          newNum = newNum.toString();
-        } else {
-          newNum = "0" + newNum.toString();
-        }
-        return newNum;
-      }
-
-      function checkNextNum(num, maxNum) {
-        if (num > maxNum) {
-          newNum = num - maxNum;
-        } else {
-          newNum = num;
-        }
-        if (newNum > 9) {
-          newNum = newNum.toString();
-        } else {
-          newNum = "0" + newNum.toString();
-        }
-        return newNum;
-      }
-
-      function prevScene(imgID = "pre1", maxNum = 7) {
-        var src1 = document.getElementById(imgID + "-1").src;
-
-        var filename1 = src1.split("/").pop();
-        var nameWithoutExtension1 = filename1.split(".")[0];
-        var numberInScene1 = nameWithoutExtension1.split("_")[1];
-        var newNumber1 = parseInt(numberInScene1) - 2;
-        var newNumber2 = newNumber1 + 1;
-        newNumber1 = checkPrevNum(newNumber1, maxNum);
-        newNumber2 = checkPrevNum(newNumber2, maxNum);
-
-        var newName1 = nameWithoutExtension1.replace(
-          numberInScene1,
-          newNumber1
-        );
-        var newSrc1 = src1.replace(filename1, newName1 + ".jpg");
-        document.getElementById(imgID + "-1").src = newSrc1;
-
-        var newName2 = nameWithoutExtension1.replace(
-          numberInScene1,
-          newNumber2
-        );
-        var newSrc2 = src1.replace(filename1, newName2 + ".jpg");
-        document.getElementById(imgID + "-2").src = newSrc2;
-      }
-
-      function nextScene(imgID = "pre1", maxNum = 7) {
-        var src2 = document.getElementById(imgID + "-2").src;
-
-        var filename2 = src2.split("/").pop();
-        var nameWithoutExtension2 = filename2.split(".")[0];
-        var numberInScene2 = nameWithoutExtension2.split("_")[1];
-        var newNumber2 = parseInt(numberInScene2) + 2;
-        var newNumber1 = newNumber2 - 1;
-
-        newNumber1 = checkNextNum(newNumber1, maxNum);
-        newNumber2 = checkNextNum(newNumber2, maxNum);
-
-        var newName2 = nameWithoutExtension2.replace(
-          numberInScene2,
-          newNumber2
-        );
-        var newSrc2 = src2.replace(filename2, newName2 + ".jpg");
-        document.getElementById(imgID + "-2").src = newSrc2;
-
-        var newName1 = nameWithoutExtension2.replace(
-          numberInScene2,
-          newNumber1
-        );
-        var newSrc1 = src2.replace(filename2, newName1 + ".jpg");
-        document.getElementById(imgID + "-1").src = newSrc1;
-      }
-
-      function prevScene1() {
-        prevScene("pre1", 10);
-      }
-
-      function nextScene1() {
-        nextScene("pre1", 10);
-      }
-
-      function prevScene2() {
-        prevScene("pre2", 7);
-      }
-
-      function nextScene2() {
-        nextScene("pre2", 7);
-      }
-
-      function prevScene3() {
-        prevScene("pre3", 7);
-      }
-
-      function nextScene3() {
-        nextScene("pre3", 7);
-      }
-
-      function prevScene4() {
-        prevScene("pre4", 7);
-      }
-
-      function nextScene4() {
-        nextScene("pre4", 7);
-      }
     </script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/title_slider.js"></script>
   </body>
 </html>
