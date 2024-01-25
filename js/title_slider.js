@@ -18,15 +18,15 @@ function showSlides() {
   // 투명도를 0으로 설정
   bg_img.style.opacity = 0;
 
+  currentIndex++;
+  if (currentIndex > 5) {
+    currentIndex = 0;
+  }
+
   // 이미지가 로드된 후 투명도를 1로 변경
   setTimeout(function () {
     bg_img.src = newSrc;
     bg_img.style.opacity = 1;
   }, 500);
-
-  currentIndex++;
-  if (currentIndex > 5) {
-    currentIndex = 0;
-  }
 }
 setInterval(showSlides, 4000);
