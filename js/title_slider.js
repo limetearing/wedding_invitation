@@ -8,6 +8,15 @@ var images = [
   "1_1_bgimage5.png",
   "1_1_bgimage6.png",
 ];
+
+const preload = (images) => {
+  images.forEach((image) => {
+    const img = new Image();
+    img.src = path + image;
+  });
+};
+preload(images);
+
 // 현재 이미지 인덱스
 var currentIndex = 0;
 showSlides();
