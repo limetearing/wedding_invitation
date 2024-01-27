@@ -36,6 +36,6 @@ function showSlides() {
   setTimeout(function () {
     bg_img.src = newSrc;
     bg_img.style.opacity = 1;
-  }, 500);
+  }, 300);
 }
 setInterval(showSlides, 4000);
