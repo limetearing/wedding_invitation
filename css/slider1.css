@@ -41,9 +41,9 @@ body {
 }
 
 .buttons button {
-  border: 2px solid #fff;
+  border: 2px solid #dcdcdc;
   background-color: transparent;
-  color: #fff;
+  color: #dcdcdc;
   cursor: pointer;
   padding: 13px 15px;
   border-radius: 50%;
@@ -51,7 +51,7 @@ body {
 }
 
 .buttons button:hover {
-  background-color: #fff;
+  background-color: #dcdcdc;
   color: #333;
 }
 
