@@ -13,10 +13,26 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
     />
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=Yqd4skhjrr9"></script>
+
 
   </head>
 
   <body>
   <p> my page version 1.0 <p>
+
+    <script>
+      var mapOptions = {
+        center: new naver.maps.LatLng(37.518, 127.0181633),
+        zoom: 15.5,
+      };
+      var map = new naver.maps.Map("map", mapOptions);
+      var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.5184736, 127.0181633),
+        map: map,
+      });
+    </script>
+
+
   </body>
 </html>
