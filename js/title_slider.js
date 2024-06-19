@@ -1,12 +1,12 @@
 // 이미지 소스 배열
 var path = "./src/";
 var images = [
-  "1_1_bgimage1.png",
-  "1_1_bgimage2.png",
-  "1_1_bgimage3.png",
-  "1_1_bgimage4.png",
-  "1_1_bgimage5.png",
-  "1_1_bgimage6.png",
+  "1_1_bgimage1.jpg",
+  "1_1_bgimage2.jpg",
+  "1_1_bgimage3.jpg",
+  "1_1_bgimage4.jpg",
+  "1_1_bgimage5.jpg",
+  "1_1_bgimage6.jpg",
 ];
 
 const preload = (images) => {
