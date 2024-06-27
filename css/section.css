@@ -2,7 +2,7 @@
   position: relative;
 }
 .bg_image {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
@@ -16,14 +16,14 @@
 }
 
 .slide_show {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/*
+
 .title {
   position: relative;
   top: 0;
@@ -32,7 +32,7 @@
   width: 100%;
   height: auto;
 }
-
+/*
 .comment {
   position: relative;
   top: 0;
