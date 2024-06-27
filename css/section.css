@@ -141,7 +141,7 @@
 }
 .notice_map {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 10%;
   z-index: 100;
   width: 100%;
