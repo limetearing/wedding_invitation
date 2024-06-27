@@ -16,9 +16,10 @@
 }
 
 .slide_show {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: auto;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
