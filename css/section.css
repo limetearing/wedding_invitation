@@ -32,6 +32,16 @@
   width: 100%;
   height: auto;
 }
+.intro {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  margin-top: -15%;
+
+}
 /*
 .comment {
   position: relative;
