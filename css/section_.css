@@ -2,10 +2,10 @@
   position: relative;
 }
 .bg_image {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: auto;
 }
@@ -16,7 +16,7 @@
 }
 
 .slide_show {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: auto;
   display: flex;
@@ -32,7 +32,17 @@
   width: 100%;
   height: auto;
 }
+.intro {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+/*  margin-top: -15%;*/
 
+}
+/*
 .comment {
   position: relative;
   top: 0;
@@ -126,7 +136,7 @@
   width: 100%;
   height: auto;
 }
-
+*/
 .notice {
   position: relative;
 }
@@ -141,7 +151,7 @@
 }
 .notice_map {
   position: absolute;
-  top: 15%;
+  top: 25%;
   left: 10%;
   z-index: 100;
   width: 100%;
