@@ -16,7 +16,7 @@
 }
 
 .slide_show {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: auto;
   display: flex;
